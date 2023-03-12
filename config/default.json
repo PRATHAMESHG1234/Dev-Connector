@@ -1,3 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://Prathamesh2002:Prathamesh2002@cluster0.dm5f31r.mongodb.net/?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://Prathamesh2002:Prathamesh2002@cluster0.dm5f31r.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret":"mysecretetoken",
+    "githubClientId":"77df743955ac89398463",
+    "githubSecret":"You need a client secret to authenticate as the application to the API."
 }
