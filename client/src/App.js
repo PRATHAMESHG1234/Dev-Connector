@@ -1,21 +1,21 @@
-import { Fragment, useEffect } from "react";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./components/layout/Landing";
-import Navbar from "./components/layout/Navbar";
-import register from "./components/auth/register";
-import login from "./components/auth/login";
+import { Fragment, useEffect } from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './components/layout/Landing';
+import Navbar from './components/layout/Navbar';
+import register from './components/auth/register';
+import login from './components/auth/login';
 
 //Redux
-import { Provider } from "react-redux";
-import store from "./store";
-import Alert from "./components/layout/Alert";
-import { loadUser } from "./Actions/auth";
-import setAuthToken from "./utils/setAuthToken";
+import { Provider } from 'react-redux';
+import store from './store';
+import Alert from './components/layout/Alert';
+import { loadUser } from './Actions/auth';
+import setAuthToken from './utils/setAuthToken';
+import Dashboard from './components/dashboard/Dashboard';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
-  console.log(localStorage.token);
 }
 
 const App = () => {
@@ -35,6 +35,7 @@ const App = () => {
             <Routes>
               <Route exact path='/register' Component={register}></Route>
               <Route exact path='/login' Component={login}></Route>
+              <Route exact path='/dashboard' Component={Dashboard}></Route>
             </Routes>
           </section>
         </Fragment>
